@@ -18,7 +18,7 @@ class Label extends StatelessWidget {
     align = align ?? TextAlign.start,
     size = size ?? 20,
     family = family ?? "Montserrat",
-    weight = weight ?? FontWeight.w500,
+    weight = weight ?? FontWeight.w700,
     col = col ?? Colors.black,
   super(key: key);
 
