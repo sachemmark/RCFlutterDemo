@@ -3,7 +3,8 @@ import "package:task_manager/components/atoms/Label.dart";
 
 class Button extends StatelessWidget {
   final String text;
-  final double? w, h, br;
+  final double? w, h;
+  final double br;
   final Color? textCol;
   final Color? col;
 
@@ -26,11 +27,17 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-          width: w,
-          height: h,
-          //br через clip
+        width: w,
+        height: h,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(br),
           color: col,
-          child: Label(text, col: textCol, align: TextAlign.center)),
+        ),
+        child: Center(child: Label(text,
+          col: textCol, 
+          align: TextAlign.center
+        ))
+      ),
       onTap: () {
         print("InkWell Activated");
       },

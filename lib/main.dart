@@ -17,8 +17,9 @@ class MainApp extends StatelessWidget {
         body: Center(
           child: Button(
             "Hello",
+            br: 10
           ),
-        ),
+        )
       ),
     );
   }
