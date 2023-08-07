@@ -17,10 +17,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: TaskPage()
-        ),
-        bottomNavigationBar: Button("kek"),
+        body: TaskPage(),
       ),
     );
   }
