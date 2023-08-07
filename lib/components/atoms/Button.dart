@@ -1,12 +1,15 @@
 import "package:flutter/material.dart";
 import "package:task_manager/components/atoms/Label.dart";
+// import "package:task_manager/components/atoms/MyTextField.dart";
+// import "package:task_manager/components/pages/EditTaskPage.dart";
+// import "package:task_manager/components/pages/TaskPage.dart";
 
 class Button extends StatelessWidget {
   final String text;
-  final double? w, h;
+  final double w, h;
   final double br;
-  final Color? textCol;
-  final Color? col;
+  final Color textCol;
+  final Color col;
 
   const Button(
     this.text, {
@@ -18,7 +21,7 @@ class Button extends StatelessWidget {
     Color? col,
   })  : w = w ?? 100,
         h = h ?? 50,
-        br = br ?? 10,
+        br = br ?? 5,
         textCol = textCol ?? Colors.white,
         col = col ?? Colors.black,
         super(key: key);
@@ -38,9 +41,9 @@ class Button extends StatelessWidget {
           align: TextAlign.center
         ))
       ),
-      onTap: () {
-        print("InkWell Activated");
-      },
+      // onTap: () {
+      //   print("InkWell Activated");
+      // },
     );
   }
 }
