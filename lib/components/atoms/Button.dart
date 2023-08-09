@@ -41,9 +41,9 @@ class Button extends StatelessWidget {
           align: TextAlign.center
         ))
       ),
-      // onTap: () {
-      //   print("InkWell Activated");
-      // },
+      onTap: () { // Проверка
+        print("InkWell Activated");
+      },
     );
   }
 }

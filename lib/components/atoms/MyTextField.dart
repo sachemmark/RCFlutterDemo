@@ -9,28 +9,34 @@ class MyTextField extends StatelessWidget {
   final int minLines;
   final Color colorFill;
   final Color colorText;
+  final String hintText;
 
   const MyTextField({Key? key,
     int? maxLines, 
     int? minLines,
     Color? colorFill,
     Color? colorText,
+    String? hintText, 
+    required InputDecoration decoration,
+
   })  : maxLines = maxLines ?? 2,
         minLines = minLines ?? 1,
         colorFill = colorFill ?? Colors.black26,
         colorText = colorText ?? Colors.white,
-
+        hintText = hintText ?? "Обязательное поле",
+        
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextField(  
       maxLines: maxLines,
       minLines: minLines,
-      style: const TextStyle(color: Colors.white), //что не так
+      style: TextStyle(color: colorText),
       decoration: InputDecoration(
         filled: true,
         fillColor: colorFill,
+        hintText: hintText,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
         )

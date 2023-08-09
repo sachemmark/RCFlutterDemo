@@ -5,9 +5,7 @@ import "package:task_manager/components/atoms/MyTextField.dart";
 import "package:task_manager/components/pages/EditTaskPage.dart";
 import "package:task_manager/components/pages/TaskPage.dart";
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MainApp());
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -17,7 +15,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: TaskPage(),
+        body: EditTaskPage(),
       ),
     );
   }
